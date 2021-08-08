@@ -1,0 +1,42 @@
+/* Global */
+
+body {
+  font-family: "Raleway", sans-serif;
+  color: black;
+}
+
+#main_wrapper {
+  width: 95%;
+  margin: auto;
+}
+/* Header */
+
+.logoReservia {
+  /* logo */
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.logoReservia {
+  width: 97px;
+  height: 45px;
+}
+
+nav ul {
+  /* navigateur enlever les puces et aligner */
+  list-style-type: none;
+  display: flex;
+  justify-content: right;
+}
+
+nav li {
+  /* ajouter une espace entre chaque puce en utilisant magin */
+  margin-right: 15px;
+  display: flex;
+}
+
+nav {
+  display: flex;
+  justify-content: baseline;
+}
