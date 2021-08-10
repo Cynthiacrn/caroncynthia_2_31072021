@@ -22,3 +22,13 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
+
+.nav{
+  color: #0065fc;
+}
+
+nav a{
+  flex-wrap: wrap;
+  padding: 21.24px 15.93px;
+  font-weight: 500;
+}
