@@ -3,6 +3,8 @@
 body {
   font-family: "Raleway", sans-serif;
   color: black;
+  margin: 0;
+  padding: 0;
 }
 
 #main_wrapper {
@@ -12,31 +14,11 @@ body {
 /* Header */
 
 .logoReservia {
-  /* logo */
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
-.logoReservia {
   width: 97px;
-  height: 45px;
-}
-
-nav ul {
-  /* navigateur enlever les puces et aligner */
-  list-style-type: none;
-  display: flex;
-  justify-content: right;
-}
-
-nav li {
-  /* ajouter une espace entre chaque puce en utilisant magin */
-  margin-right: 15px;
-  display: flex;
 }
 
 nav {
   display: flex;
-  justify-content: baseline;
+  justify-content: space-between;
+  align-items: center;
 }
