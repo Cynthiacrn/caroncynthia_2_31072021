@@ -13,6 +13,7 @@ body {
 }
 /* Header */
 
+/* logo et navigateur */
 .logoReservia {
   width: 97px;
 }
@@ -23,12 +24,19 @@ nav {
   align-items: center;
 }
 
-.nav{
+.nav {
   color: #0065fc;
 }
 
-nav a{
+nav a {
   flex-wrap: wrap;
   padding: 21.24px 15.93px;
   font-weight: 500;
+}
+
+/* Bloc filtres */
+
+#description > h1 {
+  font-size: 21px;
+  font-weight: 600;
 }
