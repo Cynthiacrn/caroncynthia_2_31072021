@@ -4,20 +4,26 @@ body {
   font-family: "Raleway", sans-serif;
   color: black;
   margin: 0;
-  padding: 0;
 }
 
 #main_wrapper {
-  width: 100%;
+  width: 80rem;
   margin: auto;
+  max-width: 100%;
+}
+
+section,
+aside,
+main {
+  padding: 2rem;
 }
 
 /*----Header----*/
 
 /*--logo et menu--*/
+
 .menu img {
   height: 50px;
-  padding: 1rem;
 }
 
 nav > a {
@@ -73,10 +79,6 @@ nav {
     border-top: none;
     border-bottom: 2px solid #0065fc;
   }
-  header {
-    padding-top: 1rem;
-    padding-left: 1rem;
-  }
 
   nav > img {
     padding-left: 1rem;
@@ -95,9 +97,6 @@ nav {
 /* Bloc filtres */
 
 /* Description */
-#description {
-  padding: 1rem;
-}
 
 #description h1 {
   font-size: 1.5rem;
@@ -118,7 +117,6 @@ nav {
 
 /* Barre de recherche */
 #search_bar {
-  padding: 1rem;
   display: flex;
 }
 
@@ -156,6 +154,3 @@ input[type="text"] {
 }
 
 /* Fltres */
-#filters {
-  padding: 1rem;
-}
