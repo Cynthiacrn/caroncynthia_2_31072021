@@ -8,35 +8,105 @@ body {
 }
 
 #main_wrapper {
-  width: 95%;
+  width: 100%;
   margin: auto;
 }
+
 /* Header */
 
 /* logo et navigateur */
-.logoReservia {
-  width: 97px;
+.menu img {
+  height: 50px;
+  padding: 1rem;
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.menu a {
+  text-decoration: none;
 }
 
-.nav {
+.hebergements {
   color: #0065fc;
 }
 
-nav a {
-  flex-wrap: wrap;
-  padding: 21.24px 15.93px;
-  font-weight: 500;
+.login {
+  color: #0065fc;
+  font-weight: bold;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 1fr repeat(4, auto);
+  gap: 2rem;
+  align-items: center;
+}
+
+@media all and (max-width: 768px) {
+  .menu {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    row-gap: 0.5rem;
+    column-gap: 0;
+  }
+  .login {
+    grid-area: 1/2;
+    padding-left: 5rem;
+  }
+
+  .menu a {
+    text-align: center;
+  }
+  header {
+    padding-top: 1rem;
+  }
+
+  .menu img {
+    padding-left: 1rem;
+    width: 94px;
+  }
+
+  .activities {
+    padding: 1rem 0;
+  }
+
+  .hebergements {
+    padding: 1rem 0;
+  }
 }
 
 /* Bloc filtres */
 
-#description > h1 {
-  font-size: 21px;
-  font-weight: 600;
+/* Description */
+#description {
+  padding: 1rem;
+}
+
+#description h1 {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+#description p {
+  margin: 0;
+}
+
+@media all and (max-width: 768px) {
+  #description h1 {
+    font-size: 1.5rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Barre de recherche */
+#search_bar {
+  padding: 1rem;
+}
+
+#search_bar .map {
+  background-color: red;
+  padding: 0.8rem 1rem;
+}
+
+/* Fltres */
+#filters {
+  padding: 1rem;
 }
