@@ -12,16 +12,23 @@ body {
   margin: auto;
 }
 
-/* Header */
+/*----Header----*/
 
-/* logo et navigateur */
+/*--logo et menu--*/
 .menu img {
   height: 50px;
   padding: 1rem;
 }
 
-.menu a {
-  text-decoration: none;
+nav > a {
+  padding: 1.9rem 0rem; /*monte le liseret bleu*/
+  display: flex;
+  text-decoration: none; /* retrait du trait sous les liens*/
+}
+
+nav > a:hover {
+  border-top: 0.1rem solid #0065fc; /*ajout d'un liseret bleu en haut du menu*/
+  color: #0065fc;
 }
 
 .hebergements {
@@ -33,43 +40,55 @@ body {
   font-weight: bold;
 }
 
-.menu {
+nav {
   display: grid;
-  grid-template-columns: 1fr repeat(4, auto);
+  grid-template-columns: 1fr repeat(3, auto);
   gap: 2rem;
   align-items: center;
 }
 
 @media all and (max-width: 768px) {
-  .menu {
+  nav {
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    row-gap: 0.5rem;
+    row-gap: 0;
     column-gap: 0;
+  }
+
+  nav > .login:hover {
+    border: none;
+  }
+
+  nav > a {
+    display: block;
+    text-align: center;
   }
   .login {
     grid-area: 1/2;
-    padding-left: 5rem;
+    justify-content: center;
+    padding-left: 3rem;
   }
 
-  .menu a {
-    text-align: center;
+  nav > a:hover {
+    border-top: none;
+    border-bottom: 2px solid #0065fc;
   }
   header {
     padding-top: 1rem;
+    padding-left: 1rem;
   }
 
-  .menu img {
+  nav > img {
     padding-left: 1rem;
     width: 94px;
   }
 
-  .activities {
-    padding: 1rem 0;
+  .hebergements {
+    padding-top: 0rem;
   }
 
-  .hebergements {
-    padding: 1rem 0;
+  .activities {
+    padding-top: 0rem;
   }
 }
 
@@ -81,17 +100,18 @@ body {
 }
 
 #description h1 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin: 0.5rem 0;
 }
 
 #description p {
+  font-size: 1.1rem;
   margin: 0;
 }
 
 @media all and (max-width: 768px) {
   #description h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding-right: 2rem;
   }
 }
@@ -99,11 +119,40 @@ body {
 /* Barre de recherche */
 #search_bar {
   padding: 1rem;
+  display: flex;
 }
 
 #search_bar .map {
-  background-color: red;
+  background-color: #f2f2f2;
   padding: 0.8rem 1rem;
+  font-size: 1.2rem;
+  justify-content: center;
+  border-radius: 10px 0px 0px 10px;
+}
+
+input[type="text"] {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+  padding: 0.8rem 1rem;
+  border-color: #f2f2f2;
+  border-style: solid;
+}
+
+.button {
+  background-color: #0065fc;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500.24;
+  font-size: 1.2rem;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border-color: #0065fc;
+  border-style: solid;
+  border-radius: 0px 10px 10px 0px;
+  text-decoration: none;
+}
+
+@media all and (max-width: 768px) {
 }
 
 /* Fltres */
