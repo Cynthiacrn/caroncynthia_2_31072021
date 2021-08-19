@@ -27,13 +27,13 @@ main {
 }
 
 nav > a {
-  padding: 1.9rem 0rem; /*monte le liseret bleu*/
+  padding: 2rem 0rem; /*monte le liseret bleu*/
   display: flex;
   text-decoration: none; /* retrait du trait sous les liens*/
 }
 
 nav > a:hover {
-  border-top: 0.1rem solid #0065fc; /*ajout d'un liseret bleu en haut du menu*/
+  border-top: 0.05px solid #0065fc; /*ajout d'un liseret bleu en haut du menu*/
   color: #0065fc;
 }
 
@@ -51,6 +51,7 @@ nav {
   grid-template-columns: 1fr repeat(3, auto);
   gap: 2rem;
   align-items: center;
+  padding: 0 2rem;
 }
 
 @media all and (max-width: 768px) {
@@ -106,6 +107,7 @@ nav {
 #description p {
   font-size: 1.1rem;
   margin: 0;
+  padding: 0.5rem 0;
 }
 
 @media all and (max-width: 768px) {
@@ -118,6 +120,7 @@ nav {
 /* Barre de recherche */
 #search_bar {
   display: flex;
+  padding: 1.5rem 0rem;
 }
 
 #search_bar .map {
@@ -131,7 +134,7 @@ nav {
 input[type="text"] {
   font-family: "Raleway", sans-serif;
   font-weight: 900;
-  font-size: 1.2rem;
+  font-size: 1rem;
   padding: 0.8rem 1rem;
   border-color: #f2f2f2;
   border-style: solid;
@@ -141,9 +144,9 @@ input[type="text"] {
   background-color: #0065fc;
   font-family: "Raleway", sans-serif;
   font-weight: 500.24;
-  font-size: 1.2rem;
+  font-size: 1rem;
   color: white;
-  padding: 0.8rem 1.5rem;
+  padding: 0.6rem 1rem;
   border-color: #0065fc;
   border-style: solid;
   border-radius: 0px 10px 10px 0px;
@@ -154,3 +157,89 @@ input[type="text"] {
 }
 
 /* Fltres */
+
+#filters {
+  display: grid;
+  grid-template-columns: 0.2fr 0fr 0fr 0fr 0.67fr 1fr;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+#filters h2 {
+  font-size: 1rem;
+}
+
+#filters a {
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  border-style: solid;
+  border-color: #f2f2f2;
+  border-radius: 3.1rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+#filters > .economique {
+  color: black;
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem 0 0;
+}
+
+#filters > .economique > .eco {
+  color: #0065fc;
+  padding: 0.8rem 0.7rem;
+  border-radius: 3rem;
+  background-color: #deebff;
+  background-origin: ;
+}
+
+#filters > .famille {
+  color: black;
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1em 0 0;
+}
+
+#filters > .famille > .fam {
+  color: #0065fc;
+  padding: 0.8rem 1rem;
+  border-radius: 3rem;
+  background-color: #deebff;
+  background-origin: border-box;
+}
+
+#filters > .romantique {
+  color: black;
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem 0 0;
+}
+
+#filters > .romantique > .love {
+  color: #0065fc;
+  padding: 0.8rem 1rem;
+  border-radius: 3rem;
+  background-color: #deebff;
+  background-origin: border-box;
+}
+
+#filters > .animaux {
+  color: black;
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem 0 0;
+}
+
+#filters > .animaux > .dog {
+  color: #0065fc;
+  padding: 0.8rem 1rem;
+  border-radius: 3rem;
+  background-color: #deebff;
+  background-origin: border-box;
+}
