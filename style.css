@@ -146,9 +146,8 @@ input[type="text"] {
 }
 
 .button {
+  /* bouton "rechercher" en Desktop */
   background-color: #0065fc;
-  font-family: "Raleway", sans-serif;
-  font-weight: 500.23;
   font-size: 1.1rem;
   color: white;
   padding: 0.6rem 1rem;
@@ -159,26 +158,24 @@ input[type="text"] {
 }
 
 #search_bar .search {
+  /* icône "loupe" en responsive */
   background-color: #0065fc;
-  font-family: "Raleway", sans-serif;
-  font-weight: 500.23;
   font-size: 1.1rem;
   color: white;
   padding: 0.6rem 1rem;
   border-color: #0065fc;
   border-style: solid;
-  border-radius: 10px 10px 10px 10px;
-  text-decoration: none;
+  border-radius: 10px;
   color: white;
-  display: none;
+  display: none; /* cache icône "loupe" en Desktop */
 }
 
 @media all and (max-width: 768px) {
   .button {
-    display: none;
+    display: none; /* cache bouton "rechercher" en responsive */
   }
   #search_bar .search {
-    display: block;
+    display: block; /* fait apparaître l'icône "loupe" en responsive */
   }
   input[type="text"] {
     padding-right: 0rem;
@@ -191,7 +188,6 @@ input[type="text"] {
   display: grid;
   grid-template-columns: 0.2fr 0fr 0fr 0fr 0.67fr 1fr;
   gap: 1.5rem;
-  align-items: center;
 }
 
 #filters h2 {
@@ -201,12 +197,16 @@ input[type="text"] {
 #filters a {
   font-size: 1rem;
   font-weight: bold;
-  color: black;
   border-style: solid;
   border-color: #f2f2f2;
   border-radius: 3.1rem;
   text-align: center;
   text-decoration: none;
+}
+
+#filters a:hover {
+  background-color: #f2f2f2;
+  text-decoration: underline;
 }
 
 #filters > .economique {
@@ -252,7 +252,7 @@ input[type="text"] {
 
 #filters > .romantique > .love {
   color: #0065fc;
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 0.9rem;
   border-radius: 3rem;
   background-color: #deebff;
   background-origin: border-box;
@@ -269,7 +269,7 @@ input[type="text"] {
 
 #filters > .animaux > .dog {
   color: #0065fc;
-  padding: 0.8rem 1rem;
+  padding: 0.8rem 0.9rem;
   border-radius: 3rem;
   background-color: #deebff;
   background-origin: border-box;
@@ -277,31 +277,33 @@ input[type="text"] {
 }
 
 @media all and (max-width: 768px) {
+  /* gestion des emplacements de chaque filtre en responsive */
   #filters {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap: 1rem;
+    column-gap: 1rem;
+    row-gap: 0.8rem;
   }
 
   #filters > .economique {
     grid-column: 1 / 2;
-    grid-row: 2 /3;
+    grid-row: 2 / 3;
   }
 
   #filters > .famille {
-    grid-column: 2 /3;
-    grid-row: 2/3;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
   }
 
   #filters > .romantique {
-    grid-column: 1/3;
-    grid-row: 3/4;
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
     margin-right: 9rem;
   }
 
   #filters > .animaux {
-    grid-column: 1/3;
-    grid-row: 4/5;
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
     margin-right: 5.8rem;
   }
 }
@@ -320,18 +322,18 @@ input[type="text"] {
   font-size: 0.7rem;
   border-style: solid;
   border-color: #f2f2f2;
-  border-width: 1px;
   border-radius: 3rem;
-  padding: 0.2rem 0.5rem;
+  padding: 0.3rem 0.6rem;
 }
 
 @media all and (max-width: 768px) {
   #legende > p {
     grid-template-columns: 0fr 1fr;
     padding: 1rem 0 0 0;
-    font-size: 0.95rem;
+    font-size: 0.93rem;
   }
 
   #legende > p > .info {
+    padding: 0.2rem 0.5rem;
   }
 }
