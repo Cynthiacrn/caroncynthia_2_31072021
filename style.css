@@ -45,6 +45,9 @@ nav > a:hover {
   color: #0065fc;
   font-weight: bold;
 }
+.activities {
+  color: black;
+}
 
 nav {
   display: grid;
