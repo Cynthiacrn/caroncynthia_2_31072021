@@ -33,7 +33,7 @@ nav > a {
 }
 
 nav > a:hover {
-  border-top: 0.05px solid #0065fc; /*ajout d'un liseret bleu en haut du menu*/
+  border-top: 2px solid #0065fc; /*ajout d'un liseret bleu en haut du menu*/
   color: #0065fc;
 }
 
@@ -372,11 +372,19 @@ main > .section1 {
   text-decoration: none;
 }
 
-p,
-h4 {
+#hebergements h3 {
+  padding: 0.5rem;
   margin: 0;
-  padding: 0.3rem;
+  font-size: 0.94rem;
+}
+#hebergements p {
+  margin: 0;
+  padding: 0.5rem;
   font-size: 0.8rem;
+}
+
+#hebergements span {
+  padding: 0.5rem 0 0 0.5;
 }
 
 #hebergements {
@@ -386,13 +394,13 @@ h4 {
   background-color: #f2f2f2;
   border-radius: 30px;
   max-width: 100%;
-  height: auto;
+  height: 40rem;
 }
 #hebergements article {
   box-shadow: 0 0 16px #0000002e;
   border: 6px solid white;
   background-color: white;
-
+  height: 12rem;
   border-radius: 1rem;
 }
 #hebergements img {
@@ -446,7 +454,7 @@ h4 {
   grid-column: 1/2;
   grid-row: 4/5;
   height: 0;
-  margin: 1rem 0 0 0;
+  margin: 0;
   padding: 0;
   font-weight: bold;
   font-size: 0.94rem;
@@ -491,7 +499,7 @@ aside img {
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: auto auto auto;
   gap: 1.5rem;
-  margin: 4rem 0 0rem 0;
+  margin: 3rem 0 0rem 0;
 }
 
 .grid--most {
