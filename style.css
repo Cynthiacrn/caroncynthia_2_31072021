@@ -173,7 +173,7 @@ input[type="text"] {
   display: none; /* cache icône "loupe" en Desktop */
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1025px) {
   .button {
     display: none; /* cache bouton "rechercher" en responsive */
   }
@@ -191,6 +191,7 @@ input[type="text"] {
   display: grid;
   grid-template-columns: 0fr 0fr 0fr 0fr 0.4fr 0.35fr;
   gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 #filters h2 {
@@ -279,7 +280,7 @@ input[type="text"] {
   margin: -2px;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1025px) {
   /* gestion des emplacements de chaque filtre en responsive */
   #filters {
     grid-template-columns: 1fr 1fr;
@@ -315,7 +316,7 @@ input[type="text"] {
 
 #legende > p {
   display: grid;
-  grid-template-columns: 0fr 1fr 1fr;
+  grid-template-columns: 0fr 1fr;
   gap: 0.5rem;
   align-items: center;
   padding: 0.2rem 0 0.5rem 0;
@@ -329,10 +330,9 @@ input[type="text"] {
   padding: 0.3rem 0.6rem;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 1025px) {
   #legende > p {
     grid-template-columns: 0fr 1fr;
-    grid-template-rows: 0fr 1fr;
     padding: 1rem 0 0 0;
     font-size: 0.93rem;
   }
@@ -345,11 +345,13 @@ input[type="text"] {
 /*----Main----*/
 
 /*--section 1: hebergements et plus populaires--*/
+main {
+  padding-top: 0;
+}
 main > .section1 {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 0fr;
-  gap: 1.5rem;
+  grid-template-columns: 65% auto;
+  column-gap: 1.5rem;
 }
 
 .blue_star {
@@ -374,18 +376,24 @@ p,
 h4 {
   margin: 0;
   padding: 0.3rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 #hebergements {
   display: grid;
-  grid-template-columns: 0.5fr 0.5fr 0.5fr;
-  grid-template-rows: 0fr 0fr 0fr 0fr;
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 1.7rem;
   background-color: #f2f2f2;
   border-radius: 30px;
   max-width: 100%;
   height: auto;
+}
+#hebergements article {
+  box-shadow: 0 0 16px #0000002e;
+  border: 6px solid white;
+  background-color: white;
+
+  border-radius: 1rem;
 }
 #hebergements img {
   width: 100%;
@@ -396,6 +404,7 @@ h4 {
 
 #hebergements h2 {
   font-size: 1.4rem;
+  font-weight: 510;
   grid-column-start: 1;
   grid-column-end: 3;
   grid-row-start: 1;
@@ -404,57 +413,33 @@ h4 {
 }
 
 .la_cannebiere {
-  background-color: white;
   grid-column: 1/2;
   grid-row: 2/3;
-  border-radius: 1rem;
-  border: 6px solid white;
-  height: 11rem;
 }
 
 .port {
-  background-color: white;
   grid-column: 2/3;
   grid-row: 2/3;
-  border-radius: 1rem;
-  border: 6px solid white;
-  height: 11rem;
 }
 
 .les_mouettes {
-  background-color: white;
   grid-column: 3/4;
   grid-row: 2/3;
-  border-radius: 1rem;
-  border: 6px solid white;
-  height: 11rem;
 }
 
 .la_mer {
-  background-color: white;
   grid-column: 1/2;
   grid-row: 3/4;
-  border-radius: 1rem;
-  border: 6px solid white;
-  height: 11rem;
 }
 
 .le_panier {
-  background-color: white;
   grid-column: 2/3;
   grid-row: 3/4;
-  border-radius: 1rem;
-  border: 6px solid white;
-  height: 11rem;
 }
 
 .chez_amina {
-  background-color: white;
   grid-column: 3/4;
   grid-row: 3/4;
-  border-radius: 1rem;
-  border: 6px solid white;
-  height: 11rem;
 }
 
 .more {
@@ -464,6 +449,7 @@ h4 {
   margin: 1rem 0 0 0;
   padding: 0;
   font-weight: bold;
+  font-size: 0.94rem;
 }
 
 /* Bloc droit: populaires*/
@@ -471,7 +457,7 @@ h4 {
 aside {
   background-color: #f2f2f2;
   border-radius: 30px;
-  width: 100%;
+  max-width: 100%;
   height: auto;
   gap: 1.7rem;
 }
@@ -493,10 +479,11 @@ aside a {
 }
 
 aside img {
+  position: absolute;
   width: 100%;
   height: 100%;
-  border-radius: 1rem 0 0 1rem;
   object-fit: cover;
+  border-radius: 1rem 0 0 1rem;
 }
 
 .plus_populaire {
@@ -504,21 +491,24 @@ aside img {
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: auto auto auto;
   gap: 1.5rem;
-  margin: 2rem 0 0rem 0;
+  margin: 4rem 0 0rem 0;
 }
 
 .grid--most {
   display: grid;
   grid-template-columns: 40% auto;
   grid-template-rows: 1fr;
+  gap: 1rem;
+  height: 10rem;
+  max-width: 100%;
 }
 
 .hotel_populaire {
-  height: 8rem;
   max-width: 100%;
   border-radius: 1.2rem;
   background-color: white;
   padding: 0.4em;
+  box-shadow: 0 0 16px #0000002e;
 }
 
 .global_descritpion {
@@ -527,21 +517,61 @@ aside img {
 
 .img__modif {
   grid-area: 1 / 1 / 2 / 2;
-  width: 8rem;
-  height: 8rem;
+  position: relative;
+  width: auto;
+  min-width: 33%;
+  max-height: 100%;
+  height: 100%;
 }
 
 .description1 {
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-decoration: none;
 }
 .description1 h3 {
-  padding: 0 4rem 0.3rem 0;
+  padding: 0 2rem 0.3rem 0;
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.94rem;
 }
 
 .star_populaire {
-  margin-top: 1.8rem;
+  margin-top: 4rem;
   font-size: 0.8rem;
+}
+
+@media all and (max-width: 1025px) {
+  main {
+    padding: 0;
+  }
+  main .section1 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  /*Bloc populaires en responsive*/
+
+  aside {
+    border-radius: 0;
+    max-width: 100%;
+    padding: 2rem;
+  }
+  .grid--most {
+    gap: 1.5rem;
+  }
+  .description1 {
+    font-size: 0.8rem;
+  }
+  .description1 h3 {
+    padding: 0 1rem 0.3rem 0;
+    margin: 0;
+    font-size: 0.94rem;
+  }
+
+  /*Bloc hebergements en responsive*/
+
+  #hebergements {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+  }
 }
