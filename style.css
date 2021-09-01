@@ -609,8 +609,6 @@ main .section2 {
   grid-template-rows: 450px;
   gap: 1.5rem;
 }
-.activities_title {
-}
 
 .section2 article {
   box-shadow: 0 0 16px #0000002e;
